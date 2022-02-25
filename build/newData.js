@@ -42,8 +42,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var csvtojson_1 = __importDefault(require("csvtojson"));
 var path_1 = __importDefault(require("path"));
-var newData = express_1.default.Router();
-newData.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+var convert = express_1.default.Router();
+convert.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var csvFile, jsonArray, result, err_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -52,8 +52,7 @@ newData.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, 
                 csvFile = path_1.default.join("".concat(__dirname, "/data.csv"));
                 console.log(__dirname);
                 if (!!(path_1.default.extname(csvFile) === '.csv')) return [3 /*break*/, 1];
-                return [2 /*return*/, (res.send('invalid file type'),
-                        console.log(csvFile))];
+                return [2 /*return*/, res.send('invalid file type')];
             case 1: return [4 /*yield*/, (0, csvtojson_1.default)().fromFile(csvFile)];
             case 2:
                 jsonArray = _a.sent();
@@ -74,4 +73,4 @@ newData.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, 
         }
     });
 }); });
-exports.default = newData;
+exports.default = convert;

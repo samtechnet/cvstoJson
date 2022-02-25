@@ -22,12 +22,12 @@
     "eslint-config-xo": "^0.40.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
+    "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   },
   "dependencies": {
     "@types/node": "^17.0.18",
     "csvtojson": "^2.0.10",
-    "express": "^4.17.3",
-    "ts-node": "^10.5.0"
+    "express": "^4.17.3"
   }
 }

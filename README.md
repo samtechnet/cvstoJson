@@ -70,7 +70,7 @@ Helpful configurations to note:
   "exclude": ["node_modules", "tests"] // exclude typechecking for node_modules and tests folder
 }
 
-e.) install ts-node: npm i @types/node, npm i ts-node
+e.) install ts-node: npm i @types/node, npm i ts-node --save-dev
 f.) you can run the project with : npm run build
 and change your test script to 
 

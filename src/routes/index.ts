@@ -3,14 +3,14 @@ import newData from '../newData';
 
 const routes = express.Router();
 
-routes.get("/", (req, res) => {
+routes.get("/", (req: express.Request, res: express.Response) => {
    
   
     res.send("This is routes");
   });
 
 routes.use('/routes', routes);
-routes.use('/newdata', newData)
+routes.use('/convert', newData)
   
 
 
